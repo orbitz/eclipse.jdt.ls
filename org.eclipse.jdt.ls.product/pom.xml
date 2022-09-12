@@ -114,6 +114,21 @@
 						</configuration>
 					</execution>
 					<execution>
+						<id>copy-config-freebsd</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/repository/config_freebsd</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/target/products/languageServer.product/freebsd/gtk/x86_64/configuration</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
 						<id>copy-config-mac-slim</id>
 						<phase>package</phase>
 						<goals>
